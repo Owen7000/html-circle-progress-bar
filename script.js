@@ -21,8 +21,8 @@ function setValue(i=0, target = 100, delay = 2, smooth = true, elementId, hueAtC
     }
   
     if (!smooth) {
-      const textValue = `${i}${innerTextSuffix}`;
-      const numberValue = `${i}%`;
+      const textValue = `${target}${innerTextSuffix}`;
+      const numberValue = `${target}%`;
       radialProgress.style.setProperty("--progress", numberValue);
       radialProgress.innerHTML = textValue;
       radialProgress.setAttribute("aria-valuenow", numberValue);
@@ -43,4 +43,4 @@ function setValue(i=0, target = 100, delay = 2, smooth = true, elementId, hueAtC
     }
 }
   
-setValue(0, 100, 0, true, 'prog1', 0, "%");
+setValue(0, 100, 0, false, 'prog1', 0, "%");
